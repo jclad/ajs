@@ -1,0 +1,85 @@
+.program {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  transform: translateY(-60px);
+
+  @include for-size(tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include for-size(tablet-only) {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  @include for-size(desktop) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+}
+.program-title {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.program-list {
+  padding-left: 48px;
+  padding-right: 48px;
+
+  @include for-size(tablet) {
+    display: flex;
+    margin-left: -20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.program-item {
+  position: relative;
+  padding: 10px 18px 42px;
+  margin-bottom: 37px;
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%231C1B1B99' stroke-width='4' stroke-dasharray='5%2c 10' stroke-dashoffset='61' stroke-linecap='square'/%3e%3c/svg%3e");
+
+  @include for-size(tablet) {
+    flex-basis: calc(100% / 3 - 20px);
+    margin-left: 20px;
+    margin-bottom: 42px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 20px;
+    padding-right: 90px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--main-text-cl);
+    background-image: url(../images/icon/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include for-size(desktop) {
+      bottom: 50%;
+      right: 20px;
+      transform: translate(0, 50%);
+    }
+  }
+}
+
+.program-item-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}

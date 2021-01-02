@@ -1,3 +1,20 @@
 :root {
+  --accent-cl: #ff6c00;
   --main-text-cl: #1c1b1b;
+  --button-text-cl: #fff;
+  --gradient: linear-gradient(
+    92.31deg,
+    rgba(237, 226, 218, 0.9) 11.41%,
+    rgba(237, 226, 218, 0.753896) 28.14%,
+    rgba(237, 226, 218, 0.466698) 41.29%,
+    rgba(237, 226, 218, 0) 48.22%
+  );
+
+  --gradient-mobile: linear-gradient(
+    104.71deg,
+    rgba(237, 226, 218, 0.9) 11.41%,
+    rgba(237, 226, 218, 0.753896) 28.14%,
+    rgba(237, 226, 218, 0.466698) 41.29%,
+    rgba(237, 226, 218, 0) 48.22%
+  );
 }

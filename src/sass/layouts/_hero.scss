@@ -1,15 +1,16 @@
 .hero {
-  background-image: url(../images/hero/mobile/banner.jpg);
+  background-image: var(--gradient-mobile),
+    url(../images/hero/mobile/banner.jpg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: left bottom, center;
+  background-size: contain, cover;
 
   @include for-size(mobile) {
-    background-image: url(../images/hero/tablet/banner.jpg);
+    background-image: var(--gradient), url(../images/hero/tablet/banner.jpg);
   }
 
   @include for-size(tablet) {
-    background-image: url(../images/hero/desktop/bg.jpg);
+    background-image: var(--gradient), url(../images/hero/desktop/bg.jpg);
   }
 
   @include for-size(desktop) {
@@ -38,12 +39,5 @@
 }
 
 .hero-title {
-  font-weight: 800;
-  font-size: 30px;
-  line-height: 1.2;
   margin-bottom: 20px;
-
-  @include for-size(tablet) {
-    font-size: 50px;
-  }
 }
