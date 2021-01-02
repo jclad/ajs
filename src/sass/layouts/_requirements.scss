@@ -1,0 +1,61 @@
+.requirements {
+  background-image: url(../images/requirements/bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  .container {
+    @include for-size(desktop) {
+      display: flex;
+    }
+  }
+}
+
+.requirements .content-box {
+  @include for-size(desktop) {
+    width: 50%;
+  }
+  &:first-child {
+    display: none;
+
+    @include for-size(desktop) {
+      display: block;
+    }
+  }
+
+  &:last-child .requirements-img {
+    @include for-size(desktop) {
+      display: none;
+    }
+  }
+}
+
+.requirements-list {
+  margin-top: -20px;
+  padding-top: 20px;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 430px;
+    margin-left: -20px;
+    margin-top: -30px;
+  }
+}
+
+.requirements-item {
+  padding: 20px;
+  margin-top: 20px;
+
+  @include for-size(tablet) {
+    width: calc(100% / 2 - 20px);
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
+
+.requirements-img {
+  margin-left: auto;
+  margin-right: auto;
+}
