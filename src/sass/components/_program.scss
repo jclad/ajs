@@ -1,7 +1,10 @@
+.program-wrap {
+  transform: translateY(-60px);
+}
+
 .program {
   padding-top: 15px;
   padding-bottom: 25px;
-  transform: translateY(-60px);
 
   @include for-size(tablet) {
     padding-left: 20px;
@@ -19,6 +22,7 @@
   }
 }
 .program-title {
+  font-size: inherit;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.3em;
@@ -75,11 +79,4 @@
       transform: translate(0, 50%);
     }
   }
-}
-
-.program-item-title {
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 1.2;
-  margin-bottom: 20px;
 }

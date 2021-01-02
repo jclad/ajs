@@ -1,0 +1,153 @@
+.course {
+  .content-box {
+    @include for-size(tablet) {
+      width: 50%;
+    }
+
+    @include for-size(desktop) {
+      margin-left: calc(100% / 12);
+    }
+
+    &:first-child {
+      padding: 40px 20px 30px;
+      margin-bottom: 20px;
+
+      @include for-size(desktop) {
+        width: calc(100% / 12 * 4);
+      }
+    }
+
+    @include for-size(desktop) {
+      &:last-child {
+        width: calc(100% / 12 * 3);
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 580px;
+  }
+}
+
+.content-wrap {
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.themes {
+  position: relative;
+  padding: 40px 18px 20px;
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='10' ry='10' stroke='%231C1B1B99' stroke-width='4' stroke-dasharray='5%2c 10' stroke-dashoffset='61' stroke-linecap='square'/%3e%3c/svg%3e");
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--main-text-cl);
+    background-image: url(../images/icon/list.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .item-title {
+    text-align: center;
+  }
+
+  li {
+    line-height: 2;
+  }
+}
+
+.about-authors {
+  margin-bottom: 20px;
+
+  @include for-size(tablet-only) {
+    padding-left: 30px;
+  }
+}
+
+.author {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.author-name {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent-cl);
+}
+
+.author-description {
+  display: none;
+}
+
+.btn-more {
+  border: none;
+  padding: 0;
+  color: rgba(162, 159, 157, 1);
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  padding: 35px 20px 45px;
+
+  @include for-size(tablet) {
+    padding: 35px;
+
+    &-content {
+      margin-right: 20px;
+    }
+
+    .btn {
+      flex-shrink: 0;
+      position: static;
+      transform: initial;
+      margin-left: auto;
+    }
+  }
+
+  @include for-size(desktop) {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.price-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.price-desc {
+  margin-bottom: 10px;
+}
+
+.video-wrap {
+  margin-bottom: 20px;
+  text-align: center;
+  @include for-size(tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 60px;
+  }
+}

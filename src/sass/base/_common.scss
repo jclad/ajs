@@ -13,6 +13,7 @@ body {
   font-size: 14px;
   line-height: 1.214;
   color: var(--main-text-cl);
+  background-color: rgba(249, 245, 242, 1);
 }
 
 address {
@@ -22,6 +23,7 @@ address {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
@@ -65,8 +67,19 @@ img {
   line-height: 1.2;
   margin-bottom: 20px;
 
-  @include for-size(tablet) {
+  @include for-size(desktop) {
     font-size: 50px;
+  }
+}
+
+.item-title {
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  @include for-size(desktop) {
+    font-size: 22px;
   }
 }
 
