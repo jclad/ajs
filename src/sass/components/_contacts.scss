@@ -1,0 +1,41 @@
+.contacts-title {
+  font-weight: 700;
+
+  @include for-size(tablet-only) {
+    display: none;
+  }
+}
+.contacts-list {
+  display: none;
+
+  @include for-size(desktop) {
+    display: inline-flex;
+  }
+}
+
+.contacts-item {
+  &:first-child .contacts-link {
+    text-decoration: underline;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid var(--main-text-cl);
+  }
+}
+
+.contacts-link {
+  display: inline-block;
+  line-height: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.contacts-btn {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+
+  @include for-size(desktop) {
+    display: none;
+  }
+}

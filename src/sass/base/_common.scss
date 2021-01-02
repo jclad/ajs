@@ -9,6 +9,14 @@ html {
 }
 
 body {
+  font-family: 'Acrom', sans-serif;
+  font-size: 14px;
+  line-height: 1.214;
+  color: var(--main-text-cl);
+}
+
+address {
+  font-style: normal;
 }
 
 h1,
@@ -37,6 +45,7 @@ img {
 
 .link {
   color: inherit;
+  text-decoration: none;
 }
 
 .list {

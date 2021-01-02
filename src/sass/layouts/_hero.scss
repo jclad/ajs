@@ -1,0 +1,49 @@
+.hero {
+  background-image: url(../images/hero/mobile/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include for-size(mobile) {
+    background-image: url(../images/hero/tablet/banner.jpg);
+  }
+
+  @include for-size(tablet) {
+    background-image: url(../images/hero/desktop/bg.jpg);
+  }
+
+  @include for-size(desktop) {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+  }
+}
+
+.hero-content {
+  padding-top: 30px;
+  padding-bottom: 248px;
+
+  @include for-size(tablet) {
+    max-width: 50%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 100px;
+    padding-bottom: 132px;
+    padding-left: 78px;
+  }
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+
+  @include for-size(tablet) {
+    font-size: 50px;
+  }
+}
