@@ -1,25 +1,29 @@
 .contacts-title {
   font-weight: 700;
-
-  @include for-size(tablet-only) {
-    display: none;
-  }
-}
-.contacts-list {
   display: none;
 
   @include for-size(desktop) {
-    display: inline-flex;
+    display: inline;
   }
 }
 
 .contacts-item {
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
   &:first-child .contacts-link {
     text-decoration: underline;
   }
 
   &:not(:last-child) {
-    border-right: 1px solid var(--main-text-cl);
+    @include for-size(desktop) {
+      border-right: 1px solid var(--main-text-cl);
+    }
   }
 }
 

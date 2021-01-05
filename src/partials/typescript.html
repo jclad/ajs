@@ -6,7 +6,9 @@
     </h2>
     <section class="video-wrap">
       <iframe
-        src="https://www.youtube.com/embed/mTLw2M_RjCU"
+        width="580"
+        height="324"
+        src="https://www.youtube.com/embed/VLaEWr4Og4s"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -29,8 +31,17 @@
         <h3 class="item-title">Авторы курса:</h3>
         <article class="author">
           <h4 class="author-name">Александр Репета</h4>
-          <button class="btn-more">Подробнее о преподавателе</button>
-          <div class="author-description">
+          <button
+            class="btn-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-1"
+            aria-expanded="false"
+            aria-controls="collapse-1"
+          >
+            Подробнее о преподавателе
+          </button>
+          <div class="author-description collapse" id="collapse-1">
             <p>
               CTO GoIT. Обучил более 3000 студентов. Разработчик с опытом
               создания клиентской и серверной части десктопных и мобильных
@@ -51,8 +62,17 @@
         </article>
         <article class="author">
           <h4 class="author-name">Владимир Мельник</h4>
-          <button class="btn-more">Подробнее о преподавателе</button>
-          <div class="author-description">
+          <button
+            class="btn-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-2"
+            aria-expanded="false"
+            aria-controls="collapse-2"
+          >
+            Подробнее о преподавателе
+          </button>
+          <div class="author-description collapse" id="collapse-2">
             <p>
               Frontend developer с 2017 года. Основные технологии которыми
               пользуется в процессе разработки это React, Redux, Typescript,
@@ -81,7 +101,7 @@
         <p class="price-desc">7 часов видео</p>
         <b>4 900 ₴</b>
       </div>
-      <button class="btn">Приобрести мини-курс</button>
+      <button class="btn btn-float">Приобрести мини-курс</button>
     </section>
   </div>
 </section>

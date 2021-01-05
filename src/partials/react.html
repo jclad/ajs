@@ -6,7 +6,9 @@
     </h2>
     <section class="video-wrap">
       <iframe
-        src="https://www.youtube.com/embed/mTLw2M_RjCU"
+        width="580"
+        height="324"
+        src="https://www.youtube.com/embed/vhc5IsJb_bM"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -31,8 +33,17 @@
         <h3 class="item-title">Авторы курса:</h3>
         <article class="author">
           <h4 class="author-name">Владимир Мельник</h4>
-          <button class="btn-more">Подробнее о преподавателе</button>
-          <div class="author-description">
+          <button
+            class="btn-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-3"
+            aria-expanded="false"
+            aria-controls="collapse-3"
+          >
+            Подробнее о преподавателе
+          </button>
+          <div class="author-description collapse" id="collapse-3">
             <p>
               Frontend developer с 2017 года. Основные технологии которыми
               пользуется в процессе разработки это React, Redux, Typescript,
@@ -53,8 +64,17 @@
 
         <article class="author">
           <h4 class="author-name">Максим Норец</h4>
-          <button class="btn-more">Подробнее о преподавателе</button>
-          <div class="author-description">
+          <button
+            class="btn-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-4"
+            aria-expanded="false"
+            aria-controls="collapse-4"
+          >
+            Подробнее о преподавателе
+          </button>
+          <div class="author-description collapse" id="collapse-4">
             <p>
               Frontend developer с 2018 года. Основные технологии которыми
               пользуется в процессе разработки это React, Redux, Typescript,
@@ -83,7 +103,7 @@
         </p>
         <b>9 900 ₴</b>
       </div>
-      <button class="btn">Приобрести мини-курс</button>
+      <button class="btn btn-float">Приобрести мини-курс</button>
     </section>
   </div>
 </section>

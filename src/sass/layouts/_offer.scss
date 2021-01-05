@@ -40,4 +40,18 @@
       background-size: 100%;
     }
   }
+
+  @include for-size(desktop) {
+    .btn-float {
+      display: none;
+    }
+  }
+}
+
+.offer-content .btn {
+  display: none;
+
+  @include for-size(desktop) {
+    display: inline-block;
+  }
 }

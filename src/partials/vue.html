@@ -6,7 +6,9 @@
     </h2>
     <section class="video-wrap">
       <iframe
-        src="https://www.youtube.com/embed/mTLw2M_RjCU"
+        width="580"
+        height="324"
+        src="https://www.youtube.com/embed/b_hsUXGElrs"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
@@ -32,8 +34,17 @@
         <h3 class="item-title">Авторы курса:</h3>
         <article class="author">
           <h4 class="author-name">Александр Веник</h4>
-          <button class="btn-more">Подробнее о преподавателе</button>
-          <div class="author-description">
+          <button
+            class="btn-more"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-5"
+            aria-expanded="false"
+            aria-controls="collapse-5"
+          >
+            Подробнее о преподавателе
+          </button>
+          <div class="author-description collapse" id="collapse-5">
             <p>
               Опыт работы более четырех лет в разработке. 2.5 года преподаватель
               в GoIT. За 4 года поработал в трех разных компаниях. Начинал с
@@ -59,7 +70,7 @@
         <p class="price-desc">7 часов видео</p>
         <b>7 900 ₴</b>
       </div>
-      <button class="btn">Приобрести мини-курс</button>
+      <button class="btn btn-float">Приобрести мини-курс</button>
     </section>
   </div>
 </section>

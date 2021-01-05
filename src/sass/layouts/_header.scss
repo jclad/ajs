@@ -1,10 +1,18 @@
 .page-header {
   padding-top: 15px;
   padding-bottom: 15px;
-}
 
-.page-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contacts-list {
+    display: none;
+
+    @include for-size(desktop) {
+      display: inline-flex;
+    }
+  }
 }
