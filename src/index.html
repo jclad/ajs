@@ -24,16 +24,28 @@
     </main>
 
     <include src="./partials/offer.html"></include>
-    <div class="backdrop">
+    <div class="backdrop" id="modalContacts">
       <div class="modal block-bg">
-        <button class="btn-close">
+        <button class="btn-close" data-modal-close>
           <svg class="btn-close-icon" width="10" height="10">
             <use href="./images/sprite.svg#close"></use>
           </svg>
         </button>
-        <!-- <h2 class="title modal-title">Регистрация на курс</h2> -->
 
-        <!-- <form action="" class="form">
+        <h2 class="title modal-title">Контакты</h2>
+        <include src="./partials/contacts.html"></include>
+      </div>
+    </div>
+    <div class="backdrop" id="modalRequest">
+      <div class="modal block-bg">
+        <button class="btn-close" data-modal-close>
+          <svg class="btn-close-icon" width="10" height="10">
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="title modal-title">Регистрация на курс</h2>
+
+        <form action="" class="form">
           <div class="form-group">
             <label class="form-label">
               Имя
@@ -74,16 +86,16 @@
           <button class="btn btn-float" type="submit">
             Зарегистрироваться
           </button>
-        </form> -->
-        <!-- <div class="thank-you-message">
+        </form>
+        <div class="thank-you-message">
           <p>Спасибо, Ваша заявка принята!</p>
           <p>Мы свяжемся с вами в ближайшее время.</p>
-        </div> -->
-
-        <h2 class="title modal-title">Контакты</h2>
-        <include src="./partials/contacts.html"></include>
+        </div>
       </div>
     </div>
+
     <script src="./index.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

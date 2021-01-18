@@ -6,9 +6,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.15);
 
-  .is-open {
+  &.is-open {
     visibility: visible;
     opacity: 1;
   }
@@ -19,7 +19,7 @@
   top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 85%;
   max-width: 380px;
   padding: 30px 20px 65px;
 }
@@ -83,13 +83,19 @@
 }
 
 .form-field-invalid {
-  display: inline-block;
+  position: absolute;
+  display: none;
   margin-top: 5px;
   font-size: 10px;
   color: rgba(235, 87, 87, 1);
 }
 
+.invalid + .form-field-invalid {
+  display: block;
+}
+
 .thank-you-message {
+  display: none;
   text-align: center;
 
   p:not(:last-child) {
