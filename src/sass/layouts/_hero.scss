@@ -1,16 +1,27 @@
 .hero {
-  background-image: var(--gradient-mobile),
-    url(../images/hero/mobile/banner.jpg);
+  background-image: var(--gradient-mobile), url(../images/hero/mobile/banner.jpg);
   background-repeat: no-repeat;
   background-position: left bottom, center;
   background-size: contain, cover;
 
+  @include for-size(retina) {
+    background-image: var(--gradient-mobile), url(../images/hero/mobile/banner@2x.jpg);
+  }
+
   @include for-size(mobile) {
     background-image: var(--gradient), url(../images/hero/tablet/banner.jpg);
+
+    @include for-size(retina) {
+      background-image: var(--gradient), url(../images/hero/tablet/banner@2x.jpg);
+    }
   }
 
   @include for-size(tablet) {
     background-image: var(--gradient), url(../images/hero/desktop/bg.jpg);
+
+    @include for-size(retina) {
+      background-image: var(--gradient), url(../images/hero/desktop/bg@2x.jpg);
+    }
   }
 
   @include for-size(desktop) {
@@ -22,6 +33,13 @@
 
   span {
     white-space: nowrap;
+  }
+
+  .btn {
+    margin-top: 20px;
+    @include for-size(tablet) {
+      display: none;
+    }
   }
 }
 

@@ -4,15 +4,32 @@
 
   .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 
+  .contacts {
+    margin-left: auto;
+  }
+
   .contacts-list {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
+  .contacts-title {
     display: none;
 
     @include for-size(desktop) {
-      display: inline-flex;
+      display: block;
+    }
+  }
+
+  .btn:not(.btn-accent) {
+    margin-left: 20px;
+
+    @include for-size(mobile-only) {
+      display: none;
     }
   }
 }
