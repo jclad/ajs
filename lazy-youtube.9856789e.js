@@ -117,20 +117,20 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/script.js":[function(require,module,exports) {
-var collapseBtn = document.querySelectorAll('.btn-more');
-collapseBtn.forEach(function (_btn) {
-  _btn.addEventListener('click', function () {
-    this.innerHTML === 'Свернуть' ? this.innerHTML = 'Подробнее о преподавателе' : this.innerHTML = 'Свернуть';
-    var content = this.nextElementSibling;
+})({"js/lazy-youtube.js":[function(require,module,exports) {
+var video_wrapper = document.querySelector('.youtube-video-place');
+var video_frame = document.querySelector('.play-youtube-video');
+console.log(video_wrapper);
+console.log(video_frame); //  Check to see if youtube wrapper exists
+// if (video_wrapper.length) {
+// If user clicks on the video wrapper load the video.
 
-    if (content.style.display === 'block') {
-      content.style.display = 'none';
-    } else {
-      content.style.display = 'block';
-    }
-  });
-});
+video_frame.addEventListener('click', function (e) {
+  /* Dynamically inject the iframe on demand of the user.
+     Pull the youtube url from the data attribute on the wrapper element. */
+  var insertFrame = '<iframe allowfullscreen frameborder="0" class="embed-responsive-item" src="' + video_wrapper.dataset.ytUrl + '"></iframe>';
+  video_wrapper.innerHTML = insertFrame;
+}); // }
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -335,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
-//# sourceMappingURL=/script.d573be0b.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/lazy-youtube.js"], null)
+//# sourceMappingURL=/lazy-youtube.9856789e.js.map
